@@ -1,1 +1,11 @@
+<<<<<<< HEAD
 
+=======
+language: python
+python:
+-3.7
+-3.8
+before_install:
+python --version
+pip install -U pip
+>>>>>>> d393a8b (Added setup.py, yml file, readme file)

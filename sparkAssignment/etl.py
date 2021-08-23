@@ -1,10 +1,8 @@
 from datetime import datetime
 
 from pyspark.sql import SparkSession, dataframe
-# import os
-# import requests
 import json
-from chispa.sparkAssignment.Dependencies.spark import start_spark
+from Dependencies.spark import start_spark
 from datetime import datetime
 
 
@@ -31,7 +29,7 @@ def main():
 
         # taking name of the country as the filter from config file
         df_output = business_function(spark, logging, df1, df2, config["countryFilter"])
-        print(df_output.show())
+
         save_output(logging, df_output, config["output_file"])
 
         # log the success and terminate Spark application
@@ -52,12 +50,16 @@ def main():
 
 def conf_read(logging):
     try:
+
         # Reading arguments from config.json
         with open("Properties/config.json", "r") as jsonfile:
+
             data = json.load(jsonfile)
+
         logging.info("Reading arguments from config.json ")
 
         return data
+
     except Exception as e:
 
         exception_msg = str(e)
@@ -78,11 +80,17 @@ def read_file(spark, logging, input_file_path1, input_file_path2):
 
     """
     try:
+
         df1 = spark.read.csv(input_file_path1, header=True, inferSchema=True)
+
         logging.info("Dataset1 read - %s" % datetime.now())
+
         df2 = spark.read.csv(input_file_path2, header=True, inferSchema=True)
+
         logging.info("Dataset2 read - %s" % datetime.now())
+
         return df1, df2
+
     except Exception as e:
 
         exception_msg = str(e)
@@ -107,19 +115,26 @@ def business_function(spark, logging, df1: dataframe, df2: dataframe, countryfil
     """
     # creating temp table for the two datasets
     try:
+
         # creating temp table for the two datasets
         df1.createOrReplaceTempView("table1")
+
         logging.info("Temp table1 created- %s" % datetime.now())
+
         df2.createOrReplaceTempView("table2")
+
         logging.info("Temp table2 created- %s" % datetime.now())
+
         # query to combine the two datasets , renaming certain columns and applying required filter
         query = "select table1.id as client_identifier,table1.email,table1.country, table2.btc_a as bitcoin_address, " \
                 "table2.cc_t as " \
                 "credit_card_type from table1 inner join table2 on table1.id = table2.id  where table1.country " \
                 "in (" + countryfilter + ") "
+
         df_output = spark.sql(query)
+
         logging.info("Business logic applied- %s" % datetime.now())
-        print(type(df_output))
+
         return df_output
 
     except Exception as e:
@@ -141,8 +156,10 @@ def save_output(logging, df_output: dataframe, output_file):
            :raise exception with the exception message
     """
     try:
+
         # saving data to client_data directory
         df_output.write.format('csv').option('header', True).mode('overwrite').save(output_file)
+
         logging.info("output file is saved %s" % datetime.now())
 
     except Exception as e:
@@ -156,4 +173,5 @@ def save_output(logging, df_output: dataframe, output_file):
 
 # entry point for PySpark ETL application
 if __name__ == '__main__':
+
     main()
