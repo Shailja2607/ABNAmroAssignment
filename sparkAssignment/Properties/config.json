@@ -1,0 +1,7 @@
+{
+  "dataset1" : "data/dataset_one.csv",
+  "dataset2": "data/dataset_two.csv",
+  "dataset_output" : "C:\\Users\\shail\\PycharmProjects\\sparkProject\\Client_Data\\",
+  "countryFilter": "'United Kingdom','Netherlands'",
+  "output_file": "client_data/"
+}

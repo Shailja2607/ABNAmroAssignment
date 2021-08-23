@@ -1,0 +1,97 @@
+INFO:Application Started - at 2021-08-21 19:13:35.625359  application_name_and_id- <my_etl_job local-1629566014205> 
+WARNING:Exception occurred in main pipeline - [Errno 2] No such file or directory: 'config.json'
+INFO:Application Started - at 2021-08-21 19:14:17.982033  application_name_and_id- <my_etl_job local-1629566056524> 
+INFO:Dataset1 read - 2021-08-21 19:14:22.469811
+INFO:Dataset2 read - 2021-08-21 19:14:22.728113
+INFO:output file is saved 2021-08-21 19:14:24.357038
+INFO:Application end at  2021-08-21 19:14:24.357038 application name- <my_etl_job local-1629566056524>
+INFO:Application Started - at 2021-08-21 19:16:54.178685  application_name_and_id- <my_etl_job local-1629566212755> 
+INFO:Dataset1 read - 2021-08-21 19:16:58.678856
+INFO:Dataset2 read - 2021-08-21 19:16:58.939227
+INFO:output file is saved 2021-08-21 19:17:00.611443
+INFO:Application end at  2021-08-21 19:17:00.611443 application name- <my_etl_job local-1629566212755>
+INFO:Application Started - at 2021-08-21 19:49:51.882513  application_name_and_id- <my_etl_job local-1629568190164> 
+WARNING:Exception occurred in main pipeline - Can not create a Path from an empty string
+INFO:Application Started - at 2021-08-21 19:53:39.638186  application_name_and_id- <my_etl_job local-1629568418034> 
+INFO:Application Started - at 2021-08-21 19:54:11.117400  application_name_and_id- <my_etl_job local-1629568449629> 
+INFO:Dataset1 read - 2021-08-21 19:54:39.386541
+WARNING:Exception occurred in main pipeline - Can not create a Path from an empty string
+INFO:Application Started - at 2021-08-21 19:55:14.358632  application_name_and_id- <my_etl_job local-1629568512872> 
+INFO:Application Started - at 2021-08-21 19:55:37.834554  application_name_and_id- <my_etl_job local-1629568536408> 
+INFO:Dataset1 read - 2021-08-21 19:56:00.392677
+WARNING:Exception occurred in main pipeline - Can not create a Path from an empty string
+INFO:Application Started - at 2021-08-21 19:56:10.394083  application_name_and_id- <my_etl_job local-1629568568712> 
+INFO:Application Started - at 2021-08-21 19:57:05.192571  application_name_and_id- <my_etl_job local-1629568623783> 
+WARNING:Exception occurred in main pipeline - Can not create a Path from an empty string
+INFO:Application Started - at 2021-08-21 19:59:15.876080  application_name_and_id- <my_etl_job local-1629568754417> 
+INFO:Application Started - at 2021-08-21 20:00:15.842998  application_name_and_id- <my_etl_job local-1629568814453> 
+INFO:Application Started - at 2021-08-21 20:00:47.700496  application_name_and_id- <my_etl_job local-1629568845642> 
+INFO:Application Started - at 2021-08-21 20:02:41.378675  application_name_and_id- <my_etl_job local-1629568959969> 
+INFO:Application Started - at 2021-08-21 20:03:03.582166  application_name_and_id- <my_etl_job local-1629568981908> 
+INFO:Application Started - at 2021-08-21 20:09:55.293758  application_name_and_id- <my_etl_job local-1629569393387> 
+INFO:Dataset1 read - 2021-08-21 20:10:31.809646
+INFO:Dataset2 read - 2021-08-21 20:10:45.133849
+INFO:output file is saved 2021-08-21 20:10:55.354344
+INFO:Application end at  2021-08-21 20:10:55.354344 application name- <my_etl_job local-1629569393387>
+INFO:Application Started - at 2021-08-21 20:14:47.731249  application_name_and_id- <my_etl_job local-1629569685902> 
+INFO:Dataset1 read - 2021-08-21 20:15:06.419740
+INFO:Dataset2 read - 2021-08-21 20:15:13.687111
+INFO:output file is saved 2021-08-21 20:15:21.305388
+INFO:Application end at  2021-08-21 20:15:21.305388 application name- <my_etl_job local-1629569685902>
+INFO:Application Started - at 2021-08-21 20:20:56.338197  application_name_and_id- <my_etl_job local-1629570054408> 
+INFO:Dataset1 read - 2021-08-21 20:21:12.435718
+INFO:Dataset2 read - 2021-08-21 20:21:20.326639
+INFO:output file is saved 2021-08-21 20:21:57.849209
+INFO:Application end at  2021-08-21 20:21:57.849209 application name- <my_etl_job local-1629570054408>
+INFO:Application Started - at 2021-08-21 20:23:16.935076  application_name_and_id- <my_etl_job local-1629570195465> 
+INFO:Dataset1 read - 2021-08-21 20:23:35.497450
+INFO:Dataset2 read - 2021-08-21 20:23:39.698036
+INFO:output file is saved 2021-08-21 20:24:27.281933
+INFO:Application end at  2021-08-21 20:24:27.281933 application name- <my_etl_job local-1629570195465>
+INFO:Application Started - at 2021-08-21 20:25:16.878925  application_name_and_id- <my_etl_job local-1629570315280> 
+INFO:Dataset1 read - 2021-08-21 20:25:46.846534
+INFO:Dataset2 read - 2021-08-21 20:25:52.747202
+WARNING:Exception occurred in main pipeline - 
+mismatched input 'in' expecting {<EOF>, ';'}(line 1, pos 209)
+
+== SQL ==
+select table1.id as client_identifier,table1.email,table1.country, table2.btc_a as bitcoin_address, table2.cc_t as credit_card_type from table1 inner join table2 on table1.id = table2.id  where table1.country in (Netherlands,united kingdom) 
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------^^^
+
+INFO:Application Started - at 2021-08-21 20:26:24.316077  application_name_and_id- <my_etl_job local-1629570382841> 
+INFO:Dataset1 read - 2021-08-21 20:26:45.581223
+INFO:Dataset2 read - 2021-08-21 20:26:49.106723
+INFO:output file is saved 2021-08-21 20:27:21.863491
+INFO:Application end at  2021-08-21 20:27:21.863491 application name- <my_etl_job local-1629570382841>
+INFO:Application Started - at 2021-08-22 18:21:48.057010  application_name_and_id- <my_etl_job local-1629649306155> 
+INFO:Dataset1 read - 2021-08-22 18:21:54.425854
+INFO:Dataset2 read - 2021-08-22 18:21:54.826001
+INFO:output file is saved 2021-08-22 18:21:56.710175
+INFO:Application end at  2021-08-22 18:21:56.710175 application name- <my_etl_job local-1629649306155>
+INFO:Application Started - at 2021-08-22 18:27:18.143050  application_name_and_id- <my_etl_job local-1629649636306> 
+INFO:Dataset1 read - 2021-08-22 18:27:23.730059
+INFO:Dataset2 read - 2021-08-22 18:27:24.082060
+INFO:output file is saved 2021-08-22 18:27:25.911810
+INFO:Application end at  2021-08-22 18:27:25.912815 application name- <my_etl_job local-1629649636306>
+INFO:Application Started - at 2021-08-22 18:29:20.534728  application_name_and_id- <my_etl_job local-1629649758747> 
+INFO:Dataset1 read - 2021-08-22 18:29:26.482265
+INFO:Dataset2 read - 2021-08-22 18:29:26.858694
+INFO:output file is saved 2021-08-22 18:29:28.803128
+INFO:Application end at  2021-08-22 18:29:28.805214 application name- <my_etl_job local-1629649758747>
+INFO:Application Started - at 2021-08-22 19:54:46.167468  application_name_and_id- <my_etl_job local-1629654884423> 
+INFO:Reading arguments from config.json 
+INFO:Dataset1 read - 2021-08-22 19:54:51.000083
+INFO:Dataset2 read - 2021-08-22 19:54:51.276201
+INFO:Temp table1 created- 2021-08-22 19:54:51.466356
+INFO:Temp table2 created- 2021-08-22 19:54:51.473953
+INFO:Business logic applied- 2021-08-22 19:54:51.580428
+ERROR:Exception occurred in main pipeline - save_output() takes 3 positional arguments but 4 were given
+INFO:Application Started - at 2021-08-22 19:55:51.342572  application_name_and_id- <my_etl_job local-1629654949859> 
+INFO:Reading arguments from config.json 
+INFO:Dataset1 read - 2021-08-22 19:55:55.868826
+INFO:Dataset2 read - 2021-08-22 19:55:56.104952
+INFO:Temp table1 created- 2021-08-22 19:55:56.305009
+INFO:Temp table2 created- 2021-08-22 19:55:56.313948
+INFO:Business logic applied- 2021-08-22 19:55:56.426752
+INFO:output file is saved 2021-08-22 19:55:57.548350
+INFO:Application end at  2021-08-22 19:55:57.549323 application name- <my_etl_job local-1629654949859>
