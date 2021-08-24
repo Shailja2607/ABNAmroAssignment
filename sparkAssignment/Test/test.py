@@ -1,7 +1,5 @@
 import unittest
-from pyspark.sql import SparkSession
 import etl
-from pyspark.sql.types import *
 from Dependencies.spark import start_spark, conf_read
 
 
