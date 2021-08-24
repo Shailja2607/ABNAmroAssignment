@@ -3,16 +3,18 @@
 language: python
 
 python:
-  - "3.6"
-  
-services:
-  - xvfb
+  - "3.8"
+
 
 before_install:
   python --version
   
+env:
+    global:
+        - SPARK_HOME=/tmp/spark-3.1.2-bin-hadoop3.2
+
 install:
-  - scripts/install
+    - ./install-spark.sh
 
 script:
   - pytest
