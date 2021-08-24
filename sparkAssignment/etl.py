@@ -137,7 +137,7 @@ def save_output(logging, df_output: dataframe, output_file):
     try:
 
         # saving data to client_data directory
-        df_output.write.format('csv').option('header', True).mode('overwrite').save(output_file)
+        df_output.repartition(1).write.format('csv').option('header', True).mode('overwrite').save(output_file)
 
         logging.info("output file is saved %s" % datetime.now())
 
