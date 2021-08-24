@@ -1,4 +1,5 @@
 
+
 language: python
 
 python:
@@ -8,7 +9,12 @@ before_install:
   python --version
 
 script:
-  python test.py  
+  python ABNAmroAssignment/sparkAssignment/Test/test.py  
+
+  
+  
+
+
 
   
   
