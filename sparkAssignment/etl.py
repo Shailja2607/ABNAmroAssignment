@@ -2,7 +2,7 @@ from datetime import datetime
 
 from pyspark.sql import SparkSession, dataframe
 import json
-from Dependencies.spark import start_spark
+from Dependencies.spark import start_spark, conf_read
 from datetime import datetime
 
 
@@ -23,7 +23,7 @@ def main():
         logging.info("Application Started - at %s  application_name_and_id- %s " % (datetime.now(), message_prefix))
 
         # reading the property file
-        config = conf_read(logging)
+        config = conf_read()
 
         df1, df2 = read_file(spark, logging, config["dataset1"], config["dataset2"])
 
@@ -44,27 +44,6 @@ def main():
         exception_msg = str(e)
 
         logging.error("Exception occurred in main pipeline - %s" % exception_msg)
-
-        raise
-
-
-def conf_read(logging):
-    try:
-
-        # Reading arguments from config.json
-        with open("Properties/config.json", "r") as jsonfile:
-
-            data = json.load(jsonfile)
-
-        logging.info("Reading arguments from config.json ")
-
-        return data
-
-    except Exception as e:
-
-        exception_msg = str(e)
-
-        logging.error("Exception occurred in conf_read - %s" % exception_msg)
 
         raise
 
@@ -173,5 +152,4 @@ def save_output(logging, df_output: dataframe, output_file):
 
 # entry point for PySpark ETL application
 if __name__ == '__main__':
-
     main()

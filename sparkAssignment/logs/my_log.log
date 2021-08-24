@@ -7,3 +7,12 @@ INFO:Temp table2 created- 2021-08-24 07:04:03.875100
 INFO:Business logic applied- 2021-08-24 07:04:04.016847
 INFO:output file is saved 2021-08-24 07:04:04.980027
 INFO:Application end at  2021-08-24 07:04:04.980027 application name- <my_etl_job local-1629781434072>
+INFO:Application Started - at 2021-08-24 07:59:02.846999  application_name_and_id- <my_etl_job local-1629784740668> 
+INFO:Reading arguments from config.json 
+INFO:Dataset1 read - 2021-08-24 07:59:07.857148
+INFO:Dataset2 read - 2021-08-24 07:59:08.114764
+INFO:Temp table1 created- 2021-08-24 07:59:08.352508
+INFO:Temp table2 created- 2021-08-24 07:59:08.368468
+INFO:Business logic applied- 2021-08-24 07:59:08.530998
+INFO:output file is saved 2021-08-24 07:59:09.401194
+INFO:Application end at  2021-08-24 07:59:09.409218 application name- <my_etl_job local-1629784740668>

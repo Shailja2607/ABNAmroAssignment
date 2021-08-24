@@ -69,3 +69,24 @@ def start_spark(app_name='my_spark_app', master='local[*]', jar_packages=[],
     message_prefix = '<' + app_name + ' ' + app_id + '>'
 
     return spark_sess, message_prefix, logging
+
+
+def conf_read():
+    try:
+
+        # Reading arguments from config.json
+        with open("Properties/config.json", "r") as jsonfile:
+
+            data = json.load(jsonfile)
+
+        logging.info("Reading arguments from config.json ")
+
+        return data
+
+    except Exception as e:
+
+        exception_msg = str(e)
+
+        logging.error("Exception occurred in conf_read - %s" % exception_msg)
+
+        raise
