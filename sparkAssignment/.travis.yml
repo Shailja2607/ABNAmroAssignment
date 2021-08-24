@@ -9,7 +9,7 @@ before_install:
   python --version
 
 script:
-  -pytest
+  - pytest
 
   
   
