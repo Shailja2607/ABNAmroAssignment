@@ -4,6 +4,9 @@ language: python
 
 python:
   - "3.6"
+  
+services:
+  - xvfb
 
 before_install:
   python --version
