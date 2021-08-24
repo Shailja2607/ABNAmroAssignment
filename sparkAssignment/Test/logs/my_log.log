@@ -1,0 +1,31 @@
+ERROR:Exception occurred in conf_read - [Errno 2] No such file or directory: 'Properties/config.json'
+INFO:Reading arguments from config.json 
+ERROR:Exception occurred in conf_read - Path does not exist: file:/C:/Users/shail/OneDrive/Desktop/SparkProj/ABNAmroAssignment/sparkAssignment/Test/data/dataset_one.csv
+INFO:Reading arguments from config.json 
+INFO:Dataset1 read - 2021-08-24 13:55:04.845618
+INFO:Dataset2 read - 2021-08-24 13:55:05.087169
+INFO:Temp table1 created- 2021-08-24 13:55:05.291872
+INFO:Temp table2 created- 2021-08-24 13:55:05.308592
+INFO:Business logic applied- 2021-08-24 13:55:05.413245
+INFO:output file is saved 2021-08-24 13:55:06.121916
+INFO:Reading arguments from config.json 
+INFO:Dataset1 read - 2021-08-24 13:56:47.067792
+INFO:Dataset2 read - 2021-08-24 13:56:47.328755
+INFO:Temp table1 created- 2021-08-24 13:56:47.560346
+INFO:Temp table2 created- 2021-08-24 13:56:47.568344
+INFO:Business logic applied- 2021-08-24 13:56:47.678898
+INFO:output file is saved 2021-08-24 13:56:48.387695
+INFO:Reading arguments from config.json 
+INFO:Dataset1 read - 2021-08-24 13:58:37.124537
+INFO:Dataset2 read - 2021-08-24 13:58:37.377237
+INFO:Temp table1 created- 2021-08-24 13:58:37.567353
+INFO:Temp table2 created- 2021-08-24 13:58:37.582978
+INFO:Business logic applied- 2021-08-24 13:58:37.709385
+INFO:output file is saved 2021-08-24 13:58:38.387150
+INFO:Reading arguments from config.json 
+INFO:Dataset1 read - 2021-08-24 14:00:14.874691
+INFO:Dataset2 read - 2021-08-24 14:00:15.138111
+INFO:Temp table1 created- 2021-08-24 14:00:15.310968
+INFO:Temp table2 created- 2021-08-24 14:00:15.326660
+INFO:Business logic applied- 2021-08-24 14:00:15.421306
+INFO:output file is saved 2021-08-24 14:00:16.150222

@@ -4,5 +4,5 @@
   "dataset_output" : "C:\\Users\\shail\\PycharmProjects\\sparkProject\\Client_Data\\",
   "countryFilter": "'United Kingdom','Netherlands'",
   "output_file": "client_data/",
-  "test_file": "test/"
+  "test_file": "client_data/"
 }

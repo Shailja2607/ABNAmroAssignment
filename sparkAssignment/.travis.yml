@@ -6,6 +6,10 @@ python:
 
 before_install:
   python --version
+
+script:
+  python test.py  
+
   
   
 
