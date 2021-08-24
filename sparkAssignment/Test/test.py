@@ -7,7 +7,7 @@ class SomeUnitTest(unittest.TestCase):
     def test_column(self):
         spark1 = SparkSession.builder.getOrCreate()
 
-        df11 = spark1.read.csv("client_data/", header=True, inferSchema=True)
+        df11 = spark1.read.csv("sparkAssignment/client_data/", header=True, inferSchema=True)
 
         result = df11.schema.names
 
