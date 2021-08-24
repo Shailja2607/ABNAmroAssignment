@@ -38,6 +38,7 @@ setup(
     install_requires=[
         'pyspark'
     ],
+    packages=find_namespace_packages(),
 
     include_package_data=True,
 
