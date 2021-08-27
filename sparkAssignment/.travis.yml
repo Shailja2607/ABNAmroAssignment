@@ -3,21 +3,18 @@
 language: python
 
 python:
-  - "3.8"
-
+  - "3.6"
 
 before_install:
   python --version
-  
-env:
-    global:
-        - SPARK_HOME=/tmp/spark-3.1.2-bin-hadoop3.2
 
 install:
-    - ./install-spark.sh
-
+  - pip install pyspark==3.1.2
+  
 script:
-  - pytest
+  python /home/travis/build/Shailja2607/ABNAmroAssignment/sparkAssignment/Test/test.py
+
+
 
   
   
